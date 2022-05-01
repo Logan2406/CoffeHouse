@@ -1,0 +1,128 @@
+.main-container
+{
+    min-height:90vh;
+    min-width: 100vw;
+    justify-content: center;
+}
+
+.mainRow
+{
+    margin-bottom:30px;
+    padding-left: 60px;
+    padding-right: 60px;
+    min-height: 70vh;
+}
+
+
+.main-option
+{
+    flex:3;
+    display: flex;
+    flex-direction: "row";
+    justify-content: center;
+    align-items: center;
+
+}
+
+.productImg
+{
+    width:calc(100%);
+    height:calc(40rem - 0.8*1vw);
+    border-radius: 200px;
+    box-shadow: 8px 4px 8px 8px rgba(0, 0, 0, 0.2), 10px 6px 20px 10px rgba(0, 0, 0, 0.19);
+}
+
+.imgoverlay
+{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color:rgba(12, 206, 240, 0.513); 
+  backdrop-filter: blur(5px); 
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  border-radius: 200px;
+  transition: .5s ease;
+}
+
+
+.inoverlay
+{
+    width:100%;
+    gap:10px;
+}
+
+.side-option
+{
+    flex:1;
+    row-gap: 10px;
+}
+
+.buttonImg
+{
+    width:6rem;
+    height:6rem;
+    border-radius: 50%;
+
+}
+
+.mainRow Button
+{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height:8em;
+    color:white;
+    background-color:rgba(255, 255, 255, .15); 
+    backdrop-filter: blur(5px); 
+    border-radius: 100px;
+    border: 2px solid aqua;
+    box-shadow: 8px 4px 8px 8px rgba(0, 0, 0, 0.2), 10px 6px 20px 10px rgba(0, 0, 0, 0.19);
+}
+
+.mainRow Button p
+{
+    font-size: 40px;
+}
+
+
+.mainRow Button:hover
+{
+    color:aqua;
+}
+
+
+.main-option:hover .imgoverlay
+{
+    width:100%;
+}
+
+.inoverlay Button
+{
+    flex-grow: 1;
+    margin-left:10px;
+    margin-right:10px;
+}
+
+
+@media screen and (max-width:988px)
+{
+    .main-container{
+        padding-top:20px;
+        padding-bottom:20px;
+        padding-left:20px;
+        padding-right:20px;
+    }
+    .mainRow
+    {
+        display: flex;
+        flex-direction: column;
+        row-gap: 50px;
+    }
+    .side-option
+    {
+        row-gap: 60px;
+    }
+}

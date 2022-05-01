@@ -1,0 +1,124 @@
+.userHandle
+{
+    background-color:rgba(3, 40, 47, 0.8); 
+    backdrop-filter: blur(10px); 
+    box-shadow: 8px 4px 8px 8px rgba(0, 0, 0, 0.7), 10px 6px 20px 10px rgba(0, 0, 0, 0.5);
+    color:wheat;
+}
+
+.userDet
+{
+    background-color:rgba(249, 224, 157, 0.8); 
+    backdrop-filter: blur(10px); 
+    box-shadow: 8px 4px 8px 8px rgba(0, 0, 0, 0.7), 10px 6px 20px 10px rgba(0, 0, 0, 0.5);
+    flex-wrap: wrap;
+}
+
+.userDet button
+{
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.7), 3px 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.use-page-nav a
+{
+    text-decoration: none;
+    font-size: 24px;
+    color:rgb(7, 27, 27);
+    font-weight: bolder;
+}
+
+.use-page-nav button
+{
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.7), 3px 3px 3px 3px rgba(0, 0, 0, 0.5);
+    width:fit-content;
+    padding: 0px;
+}
+
+.allOrder
+{
+    background-color: rgba(252, 84, 7, 0.871);
+    
+}
+
+.allReview
+{
+    background-color: rgba(0, 187, 255, 0.871);
+
+
+}
+
+
+.userProd
+{
+    background-color:rgba(249, 224, 157, 0.8); 
+    backdrop-filter: blur(10px); 
+    box-shadow: 1px 0px 8px 0px rgba(0, 0, 0, 0.7), 2px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    flex-wrap: wrap;
+}
+.review-div
+{
+    background-color:rgba(3, 40, 47, 0.8); 
+    backdrop-filter: blur(10px); 
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.7), 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    border-bottom:2px solid aqua;
+    border-left:2px solid aqua;
+    border-right:2px solid aqua;
+    flex-wrap: wrap;
+    color:wheat;
+}
+
+.prod-img
+{
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.7), 3px 3px 3px 3px rgba(0, 0, 0, 0.5);
+
+}
+.review-div button
+{
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.7), 3px 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.user-prod-div
+{
+    width: fit-content;
+}
+
+.user-prod-div table 
+{
+    table-layout: fixed;
+}
+
+.user-prod-div > button
+{
+    font-size: 22px;
+    box-shadow: 8px 4px 8px 8px rgba(0, 0, 0, 0.7), 10px 6px 20px 10px rgba(0, 0, 0, 0.5);
+}
+.review-handle
+{
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+
+.prod-rev-prod
+{
+    background-color:rgba(3, 40, 47, 0.8); 
+    backdrop-filter: blur(10px); 
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.7), 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    color:wheat;
+}
+
+@media screen and (max-width:800px)
+{
+    .userCont
+    {
+        flex-direction: column;
+        row-gap: 40px;
+    }
+    .prod-table-inside
+    {
+        flex-direction: column;
+        
+    }
+   
+}

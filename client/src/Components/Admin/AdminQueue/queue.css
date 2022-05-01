@@ -1,0 +1,32 @@
+.queue-div
+{
+    background-color:rgba(3, 40, 47, 0.8); 
+    backdrop-filter: blur(10px); 
+    box-shadow: 8px 4px 8px 8px rgba(0, 0, 0, 0.7), 10px 6px 20px 10px rgba(0, 0, 0, 0.5);
+    color:wheat;
+}
+
+.queue-table
+{
+    background-color: rgba(227, 234, 235, 0.8);
+    box-shadow: 8px 4px 8px 8px rgba(0, 0, 0, 0.7), 10px 6px 20px 10px rgba(0, 0, 0, 0.5);
+}
+
+.queue-table th
+{
+    font-size: 22px;
+    font-weight: bolder;
+    border-bottom: 2px solid black;
+}
+
+.queue-table td
+{
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+}
+
+.queue-table td button
+{
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.7), 3px 3px 3px 3px rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,89 @@
+.admin-user-div
+{
+    background-color:rgba(3, 40, 47, 0.8); 
+    backdrop-filter: blur(10px); 
+    box-shadow: 8px 4px 8px 8px rgba(0, 0, 0, 0.7), 10px 6px 20px 10px rgba(0, 0, 0, 0.5);
+    color:wheat;
+}
+
+.admin-user-div input
+{
+    font-size: 28px;
+    border: 3px solid black;
+    box-shadow: 8px 4px 8px 8px rgba(0, 0, 0, 0.7), 10px 6px 20px 10px rgba(0, 0, 0, 0.5);
+    padding-left:30px;
+}
+
+.admin-user-div .add-user-btn
+{
+    box-shadow: 8px 4px 8px 8px rgba(0, 0, 0, 0.7), 10px 6px 20px 10px rgba(0, 0, 0, 0.5);
+}
+
+.admin-user-table
+{
+    background-color: rgba(227, 234, 235, 0.8);
+    box-shadow: 8px 4px 8px 8px rgba(0, 0, 0, 0.7), 10px 6px 20px 10px rgba(0, 0, 0, 0.5);
+
+}
+
+
+.admin-user-table th
+{
+    font-size: 30px;
+    font-weight: bolder;
+    border-bottom: 2px solid black;
+}
+.admin-user-table td
+{
+    padding-bottom: 20px;
+    border-bottom: 2px solid black;
+}
+
+.admin-user-table td
+{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.admin-user-table td button
+{
+    width: 50%;
+    box-shadow: 8px 4px 8px 8px rgba(0, 0, 0, 0.2), 10px 6px 20px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+
+.paid-user
+{
+    background-color:rgba(3, 40, 47, 0.8); 
+    backdrop-filter: blur(10px); 
+    box-shadow: 8px 4px 8px 8px rgba(0, 0, 0, 0.7), 10px 6px 20px 10px rgba(0, 0, 0, 0.5);
+    color:wheat;
+    min-width: 1200px;
+}
+
+.paid-user-table
+{
+    color:wheat;
+    font-size: 22px;
+    font-weight: bolder;
+}
+
+.paid-user img
+{
+    box-shadow: 8px 4px 8px 8px rgba(0, 0, 0, 0.7), 10px 6px 20px 10px rgba(0, 0, 0, 0.5);
+}
+
+.paid-span
+{
+    color:rgb(245, 87, 87);
+}
+
+.paid-user-summ
+{
+    background-color:rgba(227, 202, 104, 0.852); 
+    backdrop-filter: blur(10px); 
+    box-shadow: 8px 4px 8px 8px rgba(0, 0, 0, 0.7), 10px 6px 20px 10px rgba(0, 0, 0, 0.5);
+    color:rgb(8, 26, 29);
+}

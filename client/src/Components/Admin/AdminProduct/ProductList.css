@@ -1,0 +1,40 @@
+td{
+    width:90px;
+    text-align: center;
+}
+th{
+    width:90px;
+}
+.table_list{
+    margin: 90px;
+}
+.table{
+   border: none; 
+}
+
+.admin-prod-table th
+{
+    font-size: 30px;
+}
+
+.admin-prod-table td
+{
+    font-size: 20px;
+    vertical-align: middle;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.admin-prod-table button
+{
+    width:75%;
+    box-shadow: 8px 4px 8px 8px rgba(0, 0, 0, 0.2), 10px 6px 20px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.admin-prod-table img
+{
+    box-shadow: 8px 4px 8px 8px rgba(0, 0, 0, 0.2), 10px 6px 20px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}

@@ -1,0 +1,60 @@
+.nav-container
+{
+    display:flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+}
+
+.mainNav
+{
+    background-color:rgba(14, 93, 107, 0.513); 
+    backdrop-filter: blur(5px); 
+    box-shadow: 8px 4px 8px 8px rgba(0, 0, 0, 0.2), 10px 6px 20px 10px rgba(0, 0, 0, 0.19);
+}
+.nav-main-con a
+{
+    font-size: calc(2rem - 0.5vw);
+    margin-left: 20px;
+    margin-right:20px;
+    color:antiquewhite;
+}
+
+.nav-main-con a:hover
+{
+    
+    color:aquamarine
+}
+
+
+
+.navIcons
+{
+    align-self: center;
+}
+
+.nav-brand
+{
+    font-size: 50px;
+    font-family: 'Satisfy', cursive;
+}
+
+.modal-content
+{
+    background-color:rgba(3, 40, 47, 0.8); 
+    backdrop-filter: blur(10px); 
+    box-shadow: 8px 4px 8px 8px rgba(0, 0, 0, 0.7), 10px 6px 20px 10px rgba(0, 0, 0, 0.5);
+}
+
+.modal-content .modal-header
+{
+    color:white;
+}
+.modal-content .modal-header button
+{
+    background-color: white;
+}
+.modal-content .modal-body
+{
+    color:white;
+}

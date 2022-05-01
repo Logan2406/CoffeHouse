@@ -1,0 +1,27 @@
+.prod-review-card
+{
+    background-color:rgba(3, 40, 47, 0.8); 
+    backdrop-filter: blur(10px); 
+    box-shadow: 8px 4px 8px 8px rgba(0, 0, 0, 0.7), 10px 6px 20px 10px rgba(0, 0, 0, 0.5);
+    color:wheat;
+}
+
+.rev-row
+{
+    border-top:2px solid aqua;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+
+.prod-review-card .prod
+{
+    font-size: 23px;
+}
+
+.prod-review-card .prod img
+{
+    box-shadow: 8px 4px 8px 8px rgba(0, 0, 0, 0.7), 10px 6px 20px 10px rgba(0, 0, 0, 0.5);
+    border:2px solid aqua;
+    width:100px;
+    height:100px;
+}
