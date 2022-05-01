@@ -23,7 +23,7 @@ function ProductModal(props) {
                                                                                         "username":usname }}).then(resp=>resp).catch(err=>err);
         
 
-        if(response.status=200)
+        if(response.status==200)
         {
             console.log('Products are' + response.data.data)
             setUserProds(response.data.data)
@@ -118,7 +118,7 @@ const UserQueue = () =>
                                                                            { "Content-Type": "application/json",
                                                                                         "ref_token":reffTok,
                                                                                         "username":usname }}).then(resp=>resp).catch(err=>err);
-        if(response.status=200)
+        if(response.status==200)
         {
             console.log("Payment Done successfully")
             setReff((prev)=>!prev);
