@@ -17,16 +17,23 @@ function ProductModal(props) {
 
     useEffect(async()=>
     {
-        const response = await axios.get("/admin/chkprods/"+id,{headers: 
-                                                            { "Content-Type": "application/json",
-                                                                                        "ref_token":reffTok,
-                                                                                        "username":usname }}).then(resp=>resp).catch(err=>err);
-        
-
-        if(response.status==200)
+        if(id==undefined||id=="")
         {
-            console.log('Products are' + response.data.data)
-            setUserProds(response.data.data)
+                console.log("Nothing")
+        }
+        else
+        {
+            const response = await axios.get("/admin/chkprods/"+id,{headers: 
+                { "Content-Type": "application/json",
+                                            "ref_token":reffTok,
+                                            "username":usname }}).then(resp=>resp).catch(err=>err);
+
+
+                    if(response.status==200)
+                    {
+                    console.log('Products are' + response.data.data)
+                    setUserProds(response.data.data)
+                    }
         }
     },[id])
 
@@ -131,7 +138,9 @@ const UserQueue = () =>
         <>
         <div className="queue-div" style={{padding:"30px",width:"1800px"}}>
             <h1 style={{textAlign:"center",paddingBottom:"40px"}}>This is User in the Queue Page</h1>
-
+            {
+                users.length>0?
+            
             <table class="table table-borderless queue-table" style={{border:"none"}}>
                 <thead>
                     <tr>
@@ -145,8 +154,8 @@ const UserQueue = () =>
                     </tr>
                 </thead>
                 <tbody>
-                {
-                  users.length>0?  users.map((ele,i)=>{return(
+                
+                  {users.map((ele,i)=>{return(
                         <tr>
                             <td style={{textAlign:"left"}}>{i+1}</td>
                             <td style={{textAlign:"center"}}>{ele.u_id}</td>
@@ -157,11 +166,14 @@ const UserQueue = () =>
                             <td style={{textAlign:"right"}}><button className="btn btn-warning" onClick={()=>{setProdModalShow(true);setProd(ele.or_id)}}>Order Details</button></td>
                             <td style={{textAlign:"center"}}><button className="btn btn-primary" onClick={()=>paymentFunc(ele.tab_id)}>Payment</button></td>
                         </tr>
-                    )}):""
-                }
+                    )})}
+                
                    
                 </tbody>
                 </table>
+           :<div>
+               <h1 style={{color:"wheat"}}>No One is in the Queue Yet...!</h1>
+           </div> }
                 <ProductModal
                     show={prodModal}
                     orderid={prod}
