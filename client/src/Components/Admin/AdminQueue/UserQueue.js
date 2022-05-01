@@ -146,7 +146,7 @@ const UserQueue = () =>
                 </thead>
                 <tbody>
                 {
-                    users.map((ele,i)=>{return(
+                  users.length>0?  users.map((ele,i)=>{return(
                         <tr>
                             <td style={{textAlign:"left"}}>{i+1}</td>
                             <td style={{textAlign:"center"}}>{ele.u_id}</td>
@@ -157,7 +157,7 @@ const UserQueue = () =>
                             <td style={{textAlign:"right"}}><button className="btn btn-warning" onClick={()=>{setProdModalShow(true);setProd(ele.or_id)}}>Order Details</button></td>
                             <td style={{textAlign:"center"}}><button className="btn btn-primary" onClick={()=>paymentFunc(ele.tab_id)}>Payment</button></td>
                         </tr>
-                    )})
+                    )}):""
                 }
                    
                 </tbody>
