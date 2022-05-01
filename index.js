@@ -9,10 +9,6 @@ require('dotenv').config({path:'./config.env'});
 
 const {loginUser,verifyUser,grantRole,refreshToken,verifyLoginUser,logoutUser,demosql} = require('./Utils/demoAuth');
 
-app.all('*', (req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "https://localhost:3000");
-    next();
-});
 
 app.use(fileUpload());
 
@@ -49,11 +45,12 @@ app.get("/logout",logoutUser);
 app.get("/demosql",demosql);
 
 
-if(process.env.NODE_ENV =="production")
-{
-    app.use(express.static("client/build"))
-}
-
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static("client/build"));
+    app.get("*", (req, res) => {
+       res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+    });
+ }
 
 
 const PORT = process.env.PORT || 4000;
