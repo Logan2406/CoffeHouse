@@ -54,7 +54,7 @@ const ProductTable = (props) =>
               let usname = JSON.parse(Cookies.get('user')).data.user;
               let reffTok = JSON.parse(Cookies.get('user')).data.refToken;
               console.log("This is ref Token: "+reffTok);
-                const response= await axios.get("/admin/getProducts/"+category,{"headers":
+                const response= await axios.get("http://localhost:4000/admin/getProducts/"+category,{"headers":
                                               {"content-type":"application/json",
                                               "ref_token":reffTok,
                                               "username":usname}}).then(response=>response).catch(err=>err);

@@ -41,7 +41,7 @@ const AdminDashboard =() =>
     {
         let usname = await JSON.parse(Cookies.get('user')).data.user;
         console.log("username ="+usname);
-        let response = await axios.get("/logout",{headers:{"Content-Type":"application/json","username":usname}}).then(res=>res).catch(err=>err)
+        let response = await axios.get("http://localhost:4000/logout",{headers:{"Content-Type":"application/json","username":usname}}).then(res=>res).catch(err=>err)
         if(response['status']===200)
         {
             Cookies.remove('user');

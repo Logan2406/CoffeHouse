@@ -16,7 +16,7 @@ const PaidUsers = () =>
     
     useEffect(async()=>
     {
-        const response = await axios.get("/admin/paidusers",{headers: 
+        const response = await axios.get("http://localhost:4000/admin/paidusers",{headers: 
                                                                   { "Content-Type": "application/json",
                                                                                         "ref_token":reffTok,
                                                                                         "username":usname }}).then(resp=>resp).catch(err=>err);

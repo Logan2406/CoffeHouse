@@ -41,7 +41,7 @@ function ReviewModal(props) {
     const handleSubmit = async(e) =>
     {
             e.preventDefault();
-            const response = await axios.post("/user/addreview",{stars:reviewObj.stars,review:reviewObj.review,his_id:props.his_id},{headers: 
+            const response = await axios.post("http://localhost:4000/user/addreview",{stars:reviewObj.stars,review:reviewObj.review,his_id:props.his_id},{headers: 
                                                                         { "Content-Type": "application/json",
                                                                         "ref_token":reffTok,
                                                                         "username":usname }}).then(resp=>resp).catch(err=>err);
@@ -167,7 +167,7 @@ function ReviewModal(props) {
     const handleSubmit = async(e) =>
     {
         e.preventDefault();
-        const response = await axios.put("/user/updatereview",{stars:editRev.stars,review:editRev.review,re_id:props.ed.reId},{headers: 
+        const response = await axios.put("http://localhost:4000/user/updatereview",{stars:editRev.stars,review:editRev.review,re_id:props.ed.reId},{headers: 
                                                                         { "Content-Type": "application/json",
                                                                         "ref_token":reffTok,
                                                                         "username":usname }}).then(resp=>resp).catch(err=>err);
@@ -267,7 +267,7 @@ const MyAllOrders = () =>
     }
 
     useEffect(async()=>{
-        const response = await axios.get("/user/myorders",{headers: 
+        const response = await axios.get("http://localhost:4000/user/myorders",{headers: 
                                                                     { "Content-Type": "application/json",
                                                                     "ref_token":reffTok,
                                                                     "username":usname }}).then(resp=>resp).catch(err=>err);

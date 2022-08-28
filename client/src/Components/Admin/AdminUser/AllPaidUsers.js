@@ -15,7 +15,7 @@ const AllPaidUsers = () =>
     const [allOrder,setAllOrders]=useState([]);
     useEffect(async()=>
     {
-        const response = await axios.get("/admin/allpaidusers",{headers: 
+        const response = await axios.get("http://localhost:4000/admin/allpaidusers",{headers: 
                                                                     { "Content-Type": "application/json",
                                                                                         "ref_token":reffTok,
                                                                                         "username":usname }}).then(resp=>resp).catch(err=>err);

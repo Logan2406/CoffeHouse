@@ -84,7 +84,7 @@ const EditForm=(props)=>
         }else{
         
                 console.log(inputState)
-                await axios.put(`/admin/update/${id}`, {prod:inputState}, {headers: 
+                await axios.put(`http://localhost:4000/admin/update/${id}`, {prod:inputState}, {headers: 
                                                                 { "Content-Type": "application/json",
                                                                     "ref_token":reffTok,
                                                                     "username":usname }})

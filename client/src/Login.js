@@ -86,7 +86,7 @@ const Login = (props) =>
         {
 
         
-        let response = await axios.post("/login",
+        let response = await axios.post("http://localhost:4000/login",
                                     {
                                     username:user.username,
                                     password:user.password
@@ -100,7 +100,7 @@ const Login = (props) =>
             console.log("Status is 200");
             Cookies.set('user',JSON.stringify(response));
             navigate('/admin')
-            successFul('Mera Dola nhi AYA Dola --- by Ravi Kisan');
+            successFul('Successfully Logged In');
 
         }
         else

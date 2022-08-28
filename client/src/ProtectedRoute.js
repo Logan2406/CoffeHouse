@@ -23,7 +23,7 @@ const ProtectedRoute =(props)=>
         let usname = JSON.parse(Cookies.get('user')).data.user;
         let reffTok = JSON.parse(Cookies.get('user')).data.refToken;
 
-        const response = await axios.post("refreshToken",{username:usname},
+        const response = await axios.post("http://localhost:4000/refreshToken",{username:usname},
                                                             {"headers":
                                                                 {"content-type":"application/json",
                                                                 "ref_token": reffTok
@@ -57,7 +57,7 @@ const ProtectedRoute =(props)=>
 
         let usname = JSON.parse(Cookies.get('user')).data.user;
         let acToken = JSON.parse(Cookies.get('user')).data.actoken;
-        const response = await axios.post("verify",{username:usname},
+        const response = await axios.post("http://localhost:4000/verify",{username:usname},
                                                         {"headers":
                                                             {"content-type":"application/json",
                                                               "auth_token": acToken

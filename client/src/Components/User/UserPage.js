@@ -89,7 +89,7 @@ function EditModal(props) {
     {
         e.preventDefault();
 
-        const response = await axios.post("/user/updateInfo",{userDet:userData,pincode:pinCode},{headers: 
+        const response = await axios.post("http://localhost:4000/user/updateInfo",{userDet:userData,pincode:pinCode},{headers: 
                                                                                     { "Content-Type": "application/json",
                                                                                     "ref_token":reffTok,
                                                                                     "username":usname }}).then(resp=>resp).catch(err=>err);
@@ -212,7 +212,7 @@ function ChangePassword(props) {
             if(passError.newpass.length<3 && passError.confpass.length<3)
             {
                 
-            const response = await axios.post("/user/changepass",{newPass:passData.newpass},{headers: 
+            const response = await axios.post("http://localhost:4000/user/changepass",{newPass:passData.newpass},{headers: 
                                         { "Content-Type": "application/json",
                                         "ref_token":reffTok,
                                         "username":usname }}).then(resp=>resp).catch(err=>err);
@@ -317,7 +317,7 @@ const UserPage = () =>
         let uname = JSON.parse(Cookies.get('user')).data.user;   
         setUsername(uname);
         
-        const response = await axios.get("/user/getInfo",{headers: 
+        const response = await axios.get("http://localhost:4000/user/getInfo",{headers: 
                                         { "Content-Type": "application/json",
                                         "ref_token":reffTok,
                                         "username":usname }}).then(resp=>resp).catch(err=>err);
@@ -334,7 +334,7 @@ const UserPage = () =>
     {
         let usname = await JSON.parse(Cookies.get('user')).data.user;
         console.log("username ="+usname);
-        let response = await axios.get("/logout",{headers:{"Content-Type":"application/json","username":usname}}).then(res=>res).catch(err=>err)
+        let response = await axios.get("http://localhost:4000/logout",{headers:{"Content-Type":"application/json","username":usname}}).then(res=>res).catch(err=>err)
         if(response['status']===200)
         {
             Cookies.remove('user');

@@ -51,7 +51,7 @@ const AllProducts = () =>
             
             const getCategories = async() =>
             {
-              await axios.get("/product/categories").then(resp=>{setCategories(resp.data)}).catch(err=>console.log(err));
+              await axios.get("http://localhost:4000/product/categories").then(resp=>{setCategories(resp.data)}).catch(err=>console.log(err));
             }
 
          getCategories(); 

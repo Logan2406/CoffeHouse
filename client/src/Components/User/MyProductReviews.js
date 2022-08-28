@@ -40,7 +40,7 @@ function ReviewModal(props) {
     const handleSubmit = async(e) =>
     {
             e.preventDefault();
-            const response = await axios.post("/user/myprodreview",{stars:reviewObj.stars,prod_id:props.prodId},{headers: 
+            const response = await axios.post("http://localhost:4000/user/myprodreview",{stars:reviewObj.stars,prod_id:props.prodId},{headers: 
                                                                         { "Content-Type": "application/json",
                                                                         "ref_token":reffTok,
                                                                         "username":usname }}).then(resp=>resp).catch(err=>err);
@@ -131,7 +131,7 @@ const MyProductReviews =() =>
 
         useEffect(async()=>{
 
-            const response = await axios.get("/user/myproducts",{headers: 
+            const response = await axios.get("http://localhost:4000/user/myproducts",{headers: 
                                                                         { "Content-Type": "application/json",
                                                                                 "ref_token":reffTok,
                                                                                 "username":usname }}).then(resp=>resp).catch(err=>err);

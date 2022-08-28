@@ -23,7 +23,7 @@ function ProductModal(props) {
         }
         else
         {
-            const response = await axios.get("/admin/chkprods/"+id,{headers: 
+            const response = await axios.get("http://localhost:4000/admin/chkprods/"+id,{headers: 
                 { "Content-Type": "application/json",
                                             "ref_token":reffTok,
                                             "username":usname }}).then(resp=>resp).catch(err=>err);
@@ -108,7 +108,7 @@ const UserQueue = () =>
 
     useEffect(async()=>
     {
-        const response = await axios.get("/admin/queuedusers",{headers: 
+        const response = await axios.get("http://localhost:4000/admin/queuedusers",{headers: 
                                                                     { "Content-Type": "application/json",
                                                                                         "ref_token":reffTok,
                                                                                         "username":usname }}).then(resp=>resp).catch(err=>err);
@@ -121,7 +121,7 @@ const UserQueue = () =>
 
     const paymentFunc = async(tabno) =>
     {
-        const response = await axios.post("/admin/payment",{tab:tabno},{headers: 
+        const response = await axios.post("http://localhost:4000/admin/payment",{tab:tabno},{headers: 
                                                                            { "Content-Type": "application/json",
                                                                                         "ref_token":reffTok,
                                                                                         "username":usname }}).then(resp=>resp).catch(err=>err);

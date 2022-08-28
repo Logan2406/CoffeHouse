@@ -46,7 +46,7 @@ function BookTableUser(props) {
             let cat = props.tableCat;
             setIsLoading(true);
             
-            const response = await axios.post("/admin/getvacant",{category:cat},{headers: 
+            const response = await axios.post("http://localhost:4000/admin/getvacant",{category:cat},{headers: 
                                                                                         { "Content-Type": "application/json",
                                                                                         "ref_token":reffTok,
                                                                                         "username":usname }}).then(resp=>resp).catch(err=>err);
@@ -71,7 +71,7 @@ function BookTableUser(props) {
             else
             {
 
-                const response = await axios.post("/admin/settable",{tableNo:tableNum,phnum:phoneNumber},{headers: 
+                const response = await axios.post("http://localhost:4000/admin/settable",{tableNo:tableNum,phnum:phoneNumber},{headers: 
                                                                                             { "Content-Type": "application/json",
                                                                                             "ref_token":reffTok,
                                                                                             "username":usname }}).then(resp=>resp).catch(err=>err);
@@ -144,7 +144,7 @@ const BookTable = () =>
     
     const removeFromTable=async(id) =>
     {   
-        const response = await axios.post("/admin/revtable",{tableNo:id},{headers: 
+        const response = await axios.post("http://localhost:4000/admin/revtable",{tableNo:id},{headers: 
                                                                                     { "Content-Type": "application/json",
                                                                                     "ref_token":reffTok,
                                                                                     "username":usname }}).then(resp=>resp).catch(err=>err);
@@ -158,16 +158,16 @@ const BookTable = () =>
     useEffect(async()=>{
 
 
-        const response = await axios.get("/admin/tablesinfo",{headers: 
+        const response = await axios.get("http://localhost:4000/admin/tablesinfo",{headers: 
                                                                 { "Content-Type": "application/json",
                                                                                         "ref_token":reffTok,
                                                                                         "username":usname }}).then(resp=>resp).catch(err=>err);
-        const response2 = await axios.get("/admin/tablesbooked",{headers: 
+        const response2 = await axios.get("http://localhost:4000/admin/tablesbooked",{headers: 
                                                                     { "Content-Type": "application/json",
                                                                                             "ref_token":reffTok,
                                                                                             "username":usname }}).then(resp=>resp).catch(err=>err);
 
-        const response3 = await axios.get("/admin/bookedusers",{headers: 
+        const response3 = await axios.get("http://localhost:4000/admin/bookedusers",{headers: 
                                                                     { "Content-Type": "application/json",
                                                                                             "ref_token":reffTok,
                                                                                             "username":usname }}).then(resp=>resp).catch(err=>err);

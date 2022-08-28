@@ -98,7 +98,7 @@ const ProductForm=(props)=>
                 console.log("This is Object Data "+formdata.get('objArr'))
                 console.log("This is form Data :"+formdata)
 
-                await axios.post("/admin/addproduct",formdata, {headers:
+                await axios.post("http://localhost:4000/admin/addproduct",formdata, {headers:
                                                                     {"Content-Type":"multipart/form-data",
                                                                     "ref_token":reffTok,
                                                                     "username":usname}} ).then(response=>console.log(response.data))

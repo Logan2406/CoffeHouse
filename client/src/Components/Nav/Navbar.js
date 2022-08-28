@@ -22,7 +22,7 @@ const  ShowTable = (props) => {
 
         useEffect(async()=>{
 
-            const response = await axios.get("/product/tables",{"headers":{"content-type":"application/json"}}).then(resp=>resp).catch(err=>err);
+            const response = await axios.get("http://localhost:4000/product/tables",{"headers":{"content-type":"application/json"}}).then(resp=>resp).catch(err=>err);
             
             if(response.status==200)
             {

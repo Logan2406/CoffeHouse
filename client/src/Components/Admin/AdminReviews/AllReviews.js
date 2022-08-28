@@ -16,7 +16,7 @@ const AllReviews =() =>
 
     useEffect(async()=>
     {
-        const response = await axios.get("/admin/getallreviews",{headers: 
+        const response = await axios.get("http://localhost:4000/admin/getallreviews",{headers: 
                                                                        { "Content-Type": "application/json",
                                                                                 "ref_token":reffTok,
                                                                                 "username":usname }}).then(resp=>resp).catch(err=>err);

@@ -15,7 +15,7 @@ const UserTable = () =>
   
   useEffect(async()=>
   {
-    const response = await axios.get("/admin/allusers",{headers: 
+    const response = await axios.get("http://localhost:4000/admin/allusers",{headers: 
                                                       { "Content-Type": "application/json",
                                                       "ref_token":reffTok,
                                                       "username":usname }}).then(resp=>resp).catch(err=>err);
@@ -75,7 +75,7 @@ const AddUser = (props)=> {
       e.preventDefault();
       
 
-      const resp = await axios.post('/admin/adduser',{num:phoneNumber},{headers: 
+      const resp = await axios.post('http://localhost:4000/admin/adduser',{num:phoneNumber},{headers: 
                                                                             { "Content-Type": "application/json",
                                                                                             "ref_token":reffTok,
                                                                                             "username":usname }}).then(resp=>resp).catch(err=>err);

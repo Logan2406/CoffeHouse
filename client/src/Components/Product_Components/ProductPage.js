@@ -34,8 +34,8 @@ const ProductPage = (props) =>
     const getData = async() =>
     {       
             
-            await axios.get("/product/"+menu).then(resp=>{setProducts(resp.data)}).catch(err=>{console.log(err)});
-            await axios.get("/product/categories").then(resp=>{setCategories(resp.data)}).catch(err=>console.log(err));
+            await axios.get("http://localhost:4000/product/"+menu).then(resp=>{setProducts(resp.data)}).catch(err=>{console.log(err)});
+            await axios.get("http://localhost:4000/product/categories").then(resp=>{setCategories(resp.data)}).catch(err=>console.log(err));
             
             setMinVal(products[0].price);
             setMaxVal(products[0].price);

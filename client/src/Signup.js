@@ -37,7 +37,7 @@ const handleSubmit = async(e) =>
     e.preventDefault();
         console.log("Submitting the user form");
 
-        let response = await axios.post("/login",
+        let response = await axios.post("http://localhost:4000/login",
                                     {
                                     username:details.phone,
                                     password:details.password
@@ -65,14 +65,14 @@ const handleSubmit = async(e) =>
     return(
              <div className="container d-flex justify-content-center align-items-center" style={{paddingTop:"30px",paddingBottom:"30px",minHeight:"100vh",overflowY:"auto"}}>
                 <form className="login-form-container" onSubmit={handleSubmit} style={{width:"700px",padding:"30px"}}>
-                    <h1 style={{textAlign:"center",fontSize:"50px"}}>Sign Up Form</h1>
+                    <h1 style={{textAlign:"center",fontSize:"50px"}}>User Login</h1>
                     <div class="btn-group"  role="group" aria-label="Basic example">
                             <button type="button" onClick={()=>props.setSign("in")} class={props.log?"btn btn-primary":"btn btn-secondary"}>Admin Login</button>
                             <button type="button" onClick={()=>props.setSign("up")} class={props.log?"btn btn-secondary":"btn btn-primary"}>User Login</button>
                     </div>
                     <div className="form-group">
                         <label htmlFor="email">Enter Mobile Number</label>
-                        <input type="text" className="form-control" value ={details.phone} onChange={handleChange} id="phone" name="phone" aria-describedby="emailHelp" placeholder="Enter email"/>
+                        <input type="text" className="form-control" value ={details.phone} onChange={handleChange} id="phone" name="phone" aria-describedby="emailHelp" placeholder="Enter phone_no"/>
                         
                     </div>
                     <div className="form-group">
